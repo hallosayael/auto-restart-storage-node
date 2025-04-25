@@ -83,8 +83,8 @@ while true; do
 
         
         # Auto restart
-        if (( block_diff > 20 )); then
-            echo -e "\033[1;31m⚠️  Node is more than 20 blocks behind. Restarting service...\033[0m"
+        if (( block_diff > 100 )); then
+            echo -e "\033[1;31m⚠️  Node is more than 100 blocks behind. Restarting service...\033[0m"
             systemctl restart zgs
             sleep 30
         fi
